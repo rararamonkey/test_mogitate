@@ -103,4 +103,5 @@ storage/app/public/products/
 
 表示には以下を使用しています。
 
+```blade
 <img src="{{ asset('storage/' . $product->image) }}">
