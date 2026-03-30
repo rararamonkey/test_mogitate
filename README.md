@@ -97,7 +97,7 @@ php artisan storage:link
 ※ ER図の画像を配置してください
 
 ```md
-![ER図](./public/er.png)
+![ER図](scr/public/er.png)
 ```
 
 ---
