@@ -1,0 +1,254 @@
+body {
+    background-color: black;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* ===== コンテナ ===== */
+.container {
+    width: 1000px;
+    margin: 60px auto;
+    padding: 50px 60px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* 中央寄せの中身 */
+.inner {
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* ===== ヘッダー ===== */
+.header h1 {
+    color: #f5a623;
+    margin: 0;
+    padding: 20px 30px;
+
+    font-family: 'Caveat', cursive !important;
+    font-size: 30px;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+}
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+/* ===== パンくず ===== */
+.breadcrumb {
+    margin-bottom: 30px;
+}
+
+.breadcrumb a {
+    color: purple;
+    text-decoration: none;
+}
+
+/* ===== フォーム横並び ===== */
+.form-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* ===== 画像エリア ===== */
+.image-area {
+    width: 220px;
+}
+
+.image-area img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ===== 右側フォーム ===== */
+.form-area {
+    width: 400px;
+}
+
+.form-area p {
+    margin-top: 15px;
+}
+
+/* 入力欄 */
+.form-area input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* ===== 季節 ===== */
+.season-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.season-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.season-item input {
+    display: none;
+}
+
+.circle {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+    position: relative;
+}
+
+/* チェック時 */
+.season-item input:checked + .circle {
+    border-color: orange;
+}
+
+.season-item input:checked + .circle::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ===== 商品説明（ここがポイント） ===== */
+.description-area {
+    width: 680px;        /* ← 右フォームと同じ幅 */
+    margin-top: 30px;
+    margin-left: 0;      /* ← 左ライン（パンくず・画像と揃う） */
+}
+
+.description-area textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* ===== エラー ===== */
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* ===== ボタン ===== */
+.action-area {
+    margin-top: 40px;
+}
+
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.back,
+.save {
+    width: 140px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.back {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: black;
+}
+
+.save {
+    background-color: #f5c400;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== 削除ボタン ===== */
+.delete-form {
+    position: absolute;
+    right: 260px;   /* ← 元140px → 20px左へ */
+    bottom: 60px;   /* ← 元40px → 3px上へ */
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 24px;   /* ← 少し大きく */
+    font-weight: bold; /* ← 太字 */
+    color: red;
+    cursor: pointer;
+}
+/* ファイル選択UI */
+.file-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.file-label {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.file-label:hover {
+    background-color: #ddd;
+}
+
+/* 本体inputは隠す */
+.file-label input[type="file"] {
+    display: none;
+}
+
+#file-name {
+    font-size: 14px;
+    color: #666;
+}
+.file-label {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+
+    display: inline-block;   /* ← これ追加 */
+    white-space: nowrap;     /* ← 改行防止 */
+}
+.required {
+    background-color: red;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+}

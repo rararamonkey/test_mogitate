@@ -1,0 +1,213 @@
+/* ===== 全体 ===== */
+body {
+    background-color: black;
+    margin: 0;
+    font-family: sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===== コンテナ ===== */
+.container {
+    background-color: white;
+    width: 800px;
+    padding: 60px 80px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* ===== ヘッダー ===== */
+.header {
+    margin: -60px -80px 20px;
+}
+
+.header h1 {
+    color: #f5a623;
+    margin: 0;
+    padding: 20px 30px;
+
+    font-family: 'Caveat', cursive; /* ← 変更 */
+    font-size: 30px;
+    font-weight: 400;
+
+    letter-spacing: 1px;
+}
+
+/* ===== タイトル ===== */
+h2 {
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+/* ===== フォーム ===== */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ===== ラベル ===== */
+p {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 12px 0 4px;
+}
+
+/* ===== 入力欄 ===== */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+textarea {
+    height: 120px;
+}
+
+/* ===== 必須ラベル ===== */
+.required {
+    background-color: red;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    margin-left: 5px;
+    border-radius: 2px;
+}
+
+/* ===== 季節（丸UI） ===== */
+.season-group {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.season-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.season-item input {
+    display: none;
+}
+
+.circle {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    background: white;
+}
+
+.season-item input:checked + .circle {
+    border-color: #f5a623;
+}
+
+.season-item input:checked + .circle::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #f5a623;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    font-size: 14px;
+}
+
+/* ===== ボタン（変更画面と統一） ===== */
+.buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 共通 */
+.back,
+.save {
+    width: 140px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* 戻る */
+.back {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: black;
+}
+
+/* 登録 */
+.save {
+    background-color: #f5c400;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== エラー ===== */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+/* ファイルinputは非表示（超重要） */
+input[type="file"] {
+    display: none;
+}
+/* ===== ファイル選択ボタン ===== */
+.file-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.file-label {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* ホバー */
+.file-label:hover {
+    background-color: #ddd;
+}
+
+/* ファイル名 */
+#file-name {
+    font-size: 14px;
+    color: #666;
+}
+/* 複数選択可 */
+.multi {
+    color: red;
+    font-size: 12px;
+    margin-left: 8px;
+}
