@@ -75,6 +75,18 @@ php artisan migrate --seed
 php artisan storage:link
 ```
 
+## テスト用画像の準備
+
+本アプリでは商品画像をGitで管理していません。
+
+以下の手順でテスト用画像を配置してください。
+
+1. 提供された `fruits-img.zip` をダウンロード
+2. 解凍する
+3. `storage/app/public/products/` に配置する
+
+※ 画像が表示されない場合は `php artisan storage:link` を再実行してください
+
 ---
 
 ## 使用技術（実行環境）
