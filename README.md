@@ -75,7 +75,7 @@ php artisan migrate --seed
 php artisan storage:link
 ```
 
-## テスト用画像の準備
+### テスト用画像の準備
 
 本アプリでは商品画像をGitで管理していません。
 
